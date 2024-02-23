@@ -41,8 +41,12 @@ jobs:
     - name: Check Build Status
       run: exit 0
       
-    - name: Hello World
-      uses: actions/hello-world@v1
+    - name: Echo Hello
+      uses: softprops/action-gh-release@v1
+      with:
+        files: echo.txt
+        title: "Release"
+        tag_name: ${{ github.sha }}
 
     
 
