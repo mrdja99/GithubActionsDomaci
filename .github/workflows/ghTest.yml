@@ -41,12 +41,13 @@ jobs:
     - name: Check Build Status
       run: exit 0
       
-    - name: Echo Hello
-      uses: softprops/action-gh-release@v1
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        files: echo.txt
-        title: "Release"
-        tag_name: ${{ github.sha }}
+        python-version: '3.x'
+
+    - name: Run Simple Python Script
+      run: python -c "print('Hello from GitHub Actions!')"
 
     
 
