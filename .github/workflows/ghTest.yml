@@ -41,3 +41,8 @@ jobs:
     - name: Check Build Status
       run: exit 0
 
+    - name: Simple Echo Action
+      uses: actions/echo@v2
+      with:
+        message: "Hello from the Echo Action!"
+
