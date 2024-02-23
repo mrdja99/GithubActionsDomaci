@@ -41,8 +41,6 @@ jobs:
     - name: Check Build Status
       run: exit 0
 
-    - name: Simple Echo Action
-      uses: actions/echo@v2
-      with:
-        message: "Hello from the Echo Action!"
+    - name: Print Timestamp
+      uses: marvinpinto/action-timestamp@v2
 
