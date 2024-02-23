@@ -40,6 +40,9 @@ jobs:
 
     - name: Check Build Status
       run: exit 0
+      
+    - name: Hello World
+      uses: actions/hello-world@v1
 
     
 
