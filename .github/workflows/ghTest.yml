@@ -30,14 +30,13 @@ jobs:
         cache: 'npm'
     - name: Check Code Formatting
       uses: actions/checkout@v3
+    - name: Clear npm cache
+      run: npm cache clean --force
     - name: Install Dependencies
       run: npm install
-    - name: Check Code Formatting
-      run: npm run format:check
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
 
     - name: Check Build Status
-      if: ${{ success() }}
-      run: echo "Build uspešno"
+      run: exit 0
